@@ -1,0 +1,143 @@
+.body{
+  width: 100%;
+  margin: 0 0 0 auto;
+}
+
+.all-container{
+  position: absolute;
+  width: 100vw;
+  margin-left: 0px;
+}
+
+.section-left{
+  height: 100vh;
+  width: 30%;
+}
+
+.section-main{
+  width: 70vw;
+  margin-left: 30vw;
+  margin-right: 0vw;
+  position: absolute;
+  right: 0vw
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #636363;
+  border-radius: 23px;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+.contenedor {
+  margin: 50px 60px;
+}
+.input_caja {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  column-width: 20px;
+  font-family: "Overpass";
+  font-size: 21px;
+  line-height: normal;
+  border-radius: 20px;
+  width: 450px;
+  height: 45px;
+  border: 1.5px solid #789ade;
+  padding: 12px 15px;
+}
+
+
+.input_caja:focus{
+  outline: none;
+  border: 2px solid #6d96e7;
+}
+
+.input_caja::placeholder{
+  color: #949494b0;
+}
+
+.input_caja-status {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: "Overpass";
+  font-size: 21px;
+  line-height: normal;
+  border-radius: 20px;
+  width: 100%;
+  height: 85px;
+  border: 1.5px solid #789ade;
+  padding: 12px 15px;
+}
+
+
+.input_caja-status:focus{
+  outline: none;
+  border: 2px solid #6d96e7;
+}
+
+.input_caja-status::placeholder{
+  color: #949494b0;
+}
+
+.etiqueta {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+
+  color: #444b59;
+}
+
+.etiqueta-edit {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+  color: #444b59;
+}
+
+.imagen {
+  position: absolute;
+  margin: -20px 30px;
+  width: 600px;
+}
+
+.titulo {
+  font-family: Overpass;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 35px;
+  letter-spacing: 0.1em;
+  color: #444b59;
+}
+
+.boton {
+  position: relative;
+  width: 450px;
+  height: 45px;
+  background: #4e67b9;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  border-radius: 20px;
+  border: 2px;
+}
