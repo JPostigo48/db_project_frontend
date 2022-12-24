@@ -84,7 +84,7 @@ export const SignInEmployees = () => {
           <Col className="mt-4 ms-5 d-inline-flex p-2 bd-highlight">
             <form>
               <a href="/">
-                <h2>Atrás</h2>
+                <h2>{"<< Atrás"}</h2>
               </a>
               <p className="titulo">BIENVENIDO DE NUEVO</p>
               <div>

@@ -1,11 +1,11 @@
 body {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-image: linear-gradient(45deg, #c94a81, #a32929);
+  background-image: linear-gradient(45deg, #91798429, #74393952);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -14,15 +14,26 @@ body {
 }
 
 .carousel {
+  margin-top: 80px;
   position: relative;
   width: 43rem;
-  height: 33rem;
+  height: 32rem;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.carousel2 {
+  margin-top: 10px;
+  position: relative;
+  width: 43rem;
+  height: 8rem;
   perspective: 500px;
   transform-style: preserve-3d;
 }
 
 img {
-  margin-left: 170px;
+  margin: 0 0 0;
+  height: 350px;
 }
 
 .card-container {
@@ -40,6 +51,24 @@ img {
   width: 100%;
   height: 100%;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(280deg, 40%, calc(100% - var(--abs-offset) * 50%));
+  border-radius: 1rem;
+  color: #9CA3AF;
+  text-align: justify;
+  transition: all 0.3s ease-out;
+}
+.card2 {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: hsl(280deg, 40%, calc(100% - var(--abs-offset) * 50%));
   border-radius: 1rem;
   color: #9CA3AF;

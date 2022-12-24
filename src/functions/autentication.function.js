@@ -24,12 +24,22 @@ export const isEmployee = () => {
     return false;
   }
   if (localStorage.getItem('jwt')) {
-    console.log(JSON.parse(localStorage.getItem('jwt')).user[0].CARGO)
-    if (JSON.parse(localStorage.getItem('jwt')).user[0].CARGO !== 3 ) {
+    console.log(JSON.parse(localStorage.getItem('jwt')).user.CARGO)
+    if (JSON.parse(localStorage.getItem('jwt')).user.CARGO !== 3 ) {
       return true;
       // return localStorage.getItem('jwt')
     }
     return false;
+  }
+    return false;
+}
+
+export const getIdUser = () => {
+  if(typeof window == 'undefined') {
+    return false;
+  }
+  if (localStorage.getItem('jwt')) {
+      return JSON.parse(localStorage.getItem('jwt')).user.dni_cliente;
   }
     return false;
 }

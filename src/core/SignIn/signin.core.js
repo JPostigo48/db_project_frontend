@@ -10,14 +10,14 @@ import { authenticate, isAuthenticated } from "../../functions/autentication.fun
 export const SignIn = () => {
 
   const [values, setValues] = useState({
-    email: '',
-    password: '',
+    dni_cliente: '',
+    clave: '',
     error: '',
     loading: false,
     NavigateToReferrer: false
   });
 
-  const {email, password, loading, error, NavigateToReferrer} = values;
+  const {dni_cliente, clave, loading, error, NavigateToReferrer} = values;
   const {user} = isAuthenticated();
   
   const handleChange = name => event => {
@@ -27,7 +27,7 @@ export const SignIn = () => {
   const clickSubmit = (event) => {
     event.preventDefault();
     setValues({...values, error: false, loading: true})
-    signin({email, password})
+    signin({dni_cliente, clave})
       .then(data => {
         if (data.error) {
           setValues({...values, error: data.error, loading:false})
@@ -84,7 +84,7 @@ export const SignIn = () => {
           <Col className="mt-4 ms-5 d-inline-flex p-2 bd-highlight">
             <form>
               <a href="/">
-                <h2>Atrás</h2>
+                <h2>{"<< Atrás"}</h2>
               </a>
               <p className="titulo">BIENVENIDO DE NUEVO</p>
               <div>
@@ -96,16 +96,16 @@ export const SignIn = () => {
                 <a href="/signin/empleado">Iniciar Sesion como Empleado</a>
               </div>
               <div className="mt-3">
-                <label htmlFor="email" className="etiqueta">
+                <label htmlFor="dni_cliente" className="etiqueta">
                   DNI
                 </label>
                 <input
-                  onChange={handleChange('email')}
+                  onChange={handleChange('dni_cliente')}
                   className="input_caja mt-1"
                   id="correo"
                   required
                   placeholder="00000000"
-                  value={email}
+                  value={dni_cliente}
                 />
               </div>
               <div className="mt-3">
@@ -113,8 +113,8 @@ export const SignIn = () => {
                   Contraseña
                 </label>
                 <input
-                  onChange={handleChange('password')}
-                  value={password}
+                  onChange={handleChange('clave')}
+                  value={clave}
                   type="password"
                   className="input_caja mt-1"
                   id="contrasena"

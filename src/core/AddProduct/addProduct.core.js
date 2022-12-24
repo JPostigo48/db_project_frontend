@@ -13,12 +13,13 @@ export const ProductCreate = () => {
     precio: '',
     stock: '',
     modelo: '',
+    imagen: '',
     error: '',
     loading: false,
     NavigateToReferrer: false
   });
 
-  const {precio, stock, modelo, loading, error, NavigateToReferrer} = values;
+  const {precio, stock, modelo, imagen, loading, error, NavigateToReferrer} = values;
   const {user} = isAuthenticated();
   
   
@@ -29,7 +30,7 @@ export const ProductCreate = () => {
   const clickSubmit = (event) => {
     event.preventDefault();
     setValues({...values, error: false, loading: true})
-    createProduct({precio, stock, modelo})
+    createProduct({precio, stock, modelo, imagen})
       .then(data => {
         if (data.error) {
           setValues({...values, error: data.error, loading:false})
@@ -115,6 +116,17 @@ export const ProductCreate = () => {
                 <input
                   onChange={handleChange('modelo')}
                   value={modelo}
+                  className="input_caja mt-1"
+                  required
+                />
+              </div>
+              <div className="mt-3">
+                <label className="etiqueta">
+                  Imagen
+                </label>
+                <input
+                  onChange={handleChange('imagen')}
+                  value={imagen}
                   className="input_caja mt-1"
                   required
                 />

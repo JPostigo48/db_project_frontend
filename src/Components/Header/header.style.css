@@ -1,0 +1,34 @@
+.ms-10 {
+  margin-left: 40rem;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.alert-edit{
+  padding: 0.5rem 0.5rem;
+}
+
+.rightabs {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.margin-r {
+  margin-right: 50px;
+}
+
+.margin-2r {
+  margin-right: 145px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
